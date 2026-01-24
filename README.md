@@ -48,7 +48,7 @@
 ### 11)  Stop the program.
 
 
-[ ] Code (Main Program)
+## ✅ Code (Main Program)
 
 ### Inside code, clearly show:
 
