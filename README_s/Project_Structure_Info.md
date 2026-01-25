@@ -2,7 +2,16 @@
         -   Every step must be implemented as its own function. No spaghetti logic. No giant main() doing everything.
             This is a pure function-based project.
 
-<hr><hr>
+<hr><hr><br>
+
+# 👤👤👤 Contributors:
+<pre>
+    1) Hamaad -- [VISIT](https://example.com)
+    2) Shezan -- [VISIT](https://example.com)
+    3) Mubashir -- [VISIT](https://example.com)
+</pre>
+
+<hr><hr><br>
 
 # 🎮 Main Game Flow (Function-Based):
 
