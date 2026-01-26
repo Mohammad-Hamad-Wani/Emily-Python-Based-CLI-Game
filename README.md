@@ -69,3 +69,5 @@
     - All letters revealed → win
     - Attempts finished → lose
     Tested by <hammad> - working fine.
+## Contributor
+Mohammad Hamad Wani
