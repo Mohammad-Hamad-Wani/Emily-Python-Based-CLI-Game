@@ -51,3 +51,4 @@ if __name__ == "__main__":
     print(displayWordProgress("apple", {"a", "e"}))
     print(displayGameStatus(3))
     print(showFinalResult(True, "apple"))
+print("Direct push test by Hamaad")
