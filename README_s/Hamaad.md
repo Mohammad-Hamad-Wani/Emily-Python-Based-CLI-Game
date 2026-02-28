@@ -1,30 +1,177 @@
-# Hamaad-Contributor (Person 3) – Display & Game Loop
+🎮 Hangman Game – Display & Game Loop Module (Person 3)
 
-## Role
-Handled the display logic and game flow for the Hangman CLI game.
+📌 Overview
 
-## Functions Implemented
+This module is my contribution to the team-based Python Hangman game project. My responsibility (as Person 3) was to implement the game loop, word display logic, and final result handling, while integrating with shared core functions written by teammates.
 
-### displayWordProgress(word, guessed_letters)
-Displays the current state of the word by revealing guessed letters and hiding others using underscores.
+This file handles:
 
-### displayGameStatus(attempts_left)
-Shows the number of attempts remaining for the player.
+● Displaying the word progress (_ _ a _ _)
 
-### gameLoop()
-Controls the game flow for testing purposes. Displays word progress, game status, and final result.
+● Tracking remaining attempts
 
-### showFinalResult(is_win, word)
-Displays the final win or lose message based on game outcome.
+● Running the main game loop
 
-## Variables Used
-- word: stores the word to be guessed
-- guessed_letters: list of letters guessed so far
-- attempts_left: number of remaining attempts
+● Showing win/lose results
 
-## Issues Faced
-- Understanding role-based function separation
-- Ensuring no logic overlap with other team members
+● Coordinating user guesses with the core game logic
 
-## Learning Outcome
-Learned modular programming, team-based development, and clean function design.
+The core logic functions are imported from Main_Checked_Functions.py, which is maintained by the team.
+
+🧠 Features Implemented
+
+✅ 1. Word Progress Display
+
+Shows guessed letters and hides unknown ones using _.
+
+Example output:
+
+_ _ a _ _ | ===> Attempts Left: 5
+
+Implemented in:
+
+displayWordProgress(word, guessed_letters, attempts_left)
+
+✅ 2. Game Loop Controller
+
+Controls the flow of the game:
+
+● Initializes the game state
+
+● Repeatedly asks the user for input
+
+● Processes guesses
+
+● Updates attempts and progress
+
+● Stops when the user wins or loses
+
+Implemented in:
+
+gameLoop()
+
+✅ 3. Win / Lose Condition Check
+
+Checks if:
+
+● The user has guessed all letters (Win)
+
+● The user has no attempts left (Lose)
+
+Implemented in:
+
+checkWinCondition(guessed_letters, selected_word) checkLoseCondition(attempts_left)
+
+✅ 4. Final Result Display
+
+Displays colored win/lose messages using ANSI color codes:
+
+● 🎉 Win → Green
+
+● ❌ Lose → Red
+
+Implemented in:
+
+showFinalResult(is_win, word)
+
+📁 File Structure
+
+Emly_Python_Project/ │ ├── Main_Checked_Functions.py # Core logic (teammates) │ ├── Contributors/ │ └── Hamaad/ │ ├── Hamaad_Code.py # My implementation (this file) │ └── Hamaad.md # This README
+
+🔗 Dependencies (Team Integration)
+
+This file depends on functions defined in:
+
+from Main_Checked_Functions import *
+
+Which provides:
+
+● initializeGameState()
+
+● getUserGuess()
+
+● processGuess()
+
+● Color constants like Green, Red, White
+
+This design keeps:
+
+● Core logic → centralized
+
+● UI & game flow → modular and maintainable
+
+▶️ How to Run
+
+From the project root directory:
+
+python Contributors/Hamaad/Hamaad_Code.py
+
+Make sure:
+
+● Main_Checked_Functions.py exists in the project root
+
+● Python is installed
+
+● You are running the command from the root folder of the repo
+
+🧪 Sample Game Flow
+
+_ _ _ _ _ | ===> Attempts Left: 5 Enter your guess: a {'a'} set() 5 _ a _ _ _ | ===> Attempts Left: 5 Enter your guess: z {'a'} {'z'} 4 _ a _ _ _ | ===> Attempts Left: 4 ...
+
+🛠 Tech Stack
+
+● Language: Python 3
+
+● Concepts Used:
+
+○ Functions
+
+○ Loops
+
+○ Sets
+
+○ Modular programming
+
+○ Team-based code integration
+
+● Tools: Git, GitHub, VS Code
+
+🤝 Contribution
+
+Contributor: Hamaad (Person 3) Responsibility:
+
+● Game loop
+
+● Display logic
+
+● Win/Lose conditions
+
+● Output formatting
+
+● Integration with core logic module
+
+📈 Future Improvements
+
+● Add difficulty levels (easy/medium/hard)
+
+● Add hint system
+
+● Improve UI with ASCII art
+
+● Add multiplayer mode
+
+● Add replay option
+
+⭐ Resume Note
+
+This module demonstrates:
+
+● Collaborative development
+
+● Clean separation of concerns
+
+● Ability to integrate code written by teammates
+
+● Handling merge conflicts and Git workflows
+
+● Writing modular and testable Python code
